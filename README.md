@@ -8,8 +8,10 @@ Create your own github repo based on this repo
 Create the build See https://docs.openshift.com/container-platform/3.11/dev_guide/builds/index.html
 
     oc apply -f buildconfig.yml
+    oc start-build hello-openshift
+    oc get builds -w
 
-Retrieve the resulting image from the build and fill in the pod
+Fill in the pod See https://kubernetes.io/docs/concepts/workloads/pods/
 
     oc apply -f pod.yml
 
@@ -23,4 +25,5 @@ Create a route that targets the service and exposes it to the outside world See 
 
 Finally create a Deployment that wraps up the pod and lets you easily deploy updates and add more replicas See https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
+    oc delete pod hello-openshift
     oc apply -f deployment.yml

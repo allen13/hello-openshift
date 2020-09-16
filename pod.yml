@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name:
-    image:
+    image: image-registry.openshift-image-registry.svc:5000/<your namespace>/hello-openshift
     env:
       # learn about the downward api https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/#the-downward-api
     - name: HELLO
@@ -15,6 +15,6 @@ spec:
         fieldRef:
           fieldPath: metadata.name
     ports:
-    - name:
+    - name: web
       containerPort:
       protocol: TCP
