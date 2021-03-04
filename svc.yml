@@ -2,19 +2,19 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app:
-  name:
+    app: hello-openshift
+  name: hello-openshift
 spec:
   ports:
   - name: web
-    port:
+    port: 8080
     protocol: TCP
-    targetPort:
+    targetPort: web
   selector:
-    app:
+    app: hello-openshift
   sessionAffinity: None
   #Pick from below
-  type:
+  type: ClusterIP
 
 # Types of Kubernetes services
 # There are four types of Kubernetes services:

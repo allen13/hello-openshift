@@ -20,7 +20,7 @@ spec:
   source:
     type: Git
     git:
-      uri:
+      uri: https://github.com/allen13/hello-openshift.git
 
 ---
 
