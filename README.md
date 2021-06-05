@@ -89,5 +89,4 @@ Create a route that targets the service and exposes it to the outside world See 
 
 Finally create a Deployment that wraps up the pod and lets you easily deploy updates and add more replicas See https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
-    oc delete pod hello-openshift
     oc apply -f deployment.yml
